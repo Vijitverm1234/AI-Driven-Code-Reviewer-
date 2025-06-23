@@ -1,0 +1,109 @@
+/* Reset & Root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+/* Theme Variables */
+.light-mode {
+  --bg-left: #d8d8d8;
+  --bg-right: #f4f4f4;
+  --text-color: #000000;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+}
+
+.dark-mode {
+  --bg-left: #0D1117;
+  --bg-right: #161B22;
+  --text-color: #C9D1D9;
+  --button-bg: #58A6FF;
+  --button-text: #0D1117;
+}
+
+
+/* Main Layout */
+main {
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+   gap: 20px;
+  height:95vh;
+  width: 100%;
+  margin: 10px;
+}
+
+/* Panel Styles */
+.left, .right {
+  flex: 1;
+  padding: 2rem;
+  color: var(--text-color);
+  height: 100%;
+  position: relative;
+}
+
+.left {
+  background-color: var(--bg-left);
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.right {
+  background-color: var(--bg-right);
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* Code section in left */
+.code {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+/* Review button fixed to bottom */
+.review {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.review-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.review-btn:hover {
+  opacity: 0.9;
+}
+
+/* Theme toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  opacity: 0.85;
+}
