@@ -1,3 +1,9 @@
+
+<div align="center">
+  <img width="937" alt="image" src="https://github.com/user-attachments/assets/7964c767-bc52-477e-8ff4-52da5c934f5f" />
+
+</div>
+
 # 🔍 AI-Driven Code Reviewer
 
 An AI-powered full-stack application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js) that allows users to submit their code and receive intelligent reviews using the **Google Gemini API**. The app includes **full user authentication** using JWT and bcrypt.
