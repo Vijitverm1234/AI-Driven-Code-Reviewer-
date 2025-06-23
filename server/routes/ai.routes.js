@@ -1,12 +1,12 @@
 import generateContent from '../services/ai.service.js';
 import express from 'express';
 const router=express.Router()
-router.get("/get-response", async (req,res)=>{
-    const prompt=req.query.prompt;
-    if(!prompt){
+router.post("/get-review", async (req,res)=>{
+    const code=req.body.code;
+    if(!code){
          return res.status(404).send("prompt is required")
     }
-    const response=await generateContent(prompt);
+    const response=await generateContent(code);
      res.send(response)
 })
 
